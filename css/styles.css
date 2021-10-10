@@ -82,13 +82,10 @@ body {
   line-height: calc(31 / 26);
   color: var(--accent-color);
   display: block;
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo:hover,
 .logo:focus{
-  font-family: "Raleway", sans-serif
-  font-weight: 700;
-  font-size: 26px;
-  line-height: calc(31 / 26);
   color: var(--accent-color);
 }
 .footer-link{
@@ -143,6 +140,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-title-color);
   position: relative;
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus,
@@ -151,23 +149,15 @@ body {
 }
 
 .current::after{
- content: "";
- position: absolute;
- width: 100%;
- height: 4px;
- border-radius: 2px;
- background-color: var(--accent-color);
- display: block;
- bottom: 0px;
-
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  display: block;
+  bottom: 0px;
 }
-
-
-
-
-
-
-
 .header-item:not(:last-child){
   margin-right: 50px;
 }
@@ -180,6 +170,7 @@ body {
 .icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition: fill 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link-item{
   display: flex;
@@ -188,6 +179,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link-item:hover,
 .header-link-item:focus{
@@ -230,10 +222,12 @@ body {
 .hero-btn {
   color: var(--third-text-color);
   background-color: var(--accent-color);
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover {
   color: var(--third-text-color);
-  background: var(--hero-button);
+  background-color: var(--hero-button);
 }
 /*========= ПОЧЕМУ МЫ ===========*/
 .whyus{
@@ -337,19 +331,21 @@ body {
   height: 44px;
   border-radius: 50%;
   display: block;
-  background: var(--primary-title-color);
+  background-color: var(--primary-title-color);
   display: flex;  
   align-items: center;
   justify-content: center;
+  transition: background-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socital-link-pkt{
 fill: var(--clients-color);
 width: 20px;
 height: 20px;
+transition: fill 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ourteam-socital-link:hover,
 .ourteam-socital-link:focus{
-  background: var(--accent-color);
+  background-color: var(--accent-color);
 }
 .ourteam-socital-link:hover .socital-link-pkt,
 .ourteam-socital-link:focus .socital-link-pkt{
@@ -370,6 +366,8 @@ height: 20px;
   border: 1px solid var(--clients-color);
   border-radius: 4px;
   fill: var(--clients-color); 
+  transition: border 240ms cubic-bezier(0.4, 0, 0.2, 1), 
+              fill 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus{
@@ -391,6 +389,7 @@ height: 20px;
 }
 .address{
   color: var(--third-text-color);
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contact{
 }
@@ -400,6 +399,7 @@ height: 20px;
 }
 .contact{
   color: rgba(255, 255, 255, 0.6);
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact:hover,
 .contact:focus{
@@ -439,7 +439,6 @@ height: 20px;
   color: var(--primary-title-color);
   margin-bottom: 20px;
 }
-
 .section-common-list{
   display: flex;
   flex-wrap: wrap;
@@ -447,7 +446,6 @@ height: 20px;
   justify-content: center;
   margin-left: -10px;
   margin-top: -30px;
-
 }
 .section-common-item{
   width: 44px;
@@ -464,26 +462,20 @@ height: 20px;
   height: 100%;
   border-radius: 50%;
   display: block;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   display: flex;  
   align-items: center;
   justify-content: center;
+  transition: background-color 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }  
+.section-common-link:hover,
+.section-common-link:focus{
+  background-color: var(--accent-color);
+}
 .section-common-pkt{
   fill: var(--primary-title-color);
   width: 20px;
   height: 20px;
-}
-.section-common-link:hover,
-.section-common-link:focus{
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  display: block;
-  background: var(--accent-color);
-  display: flex;  
-  align-items: center;
-  justify-content: center;
 }
 /*======== ФИЛЬТР ==========*/
 .portofolio-hero{
@@ -500,6 +492,9 @@ height: 20px;
 .filtr-btn {
   color: var(--secondary-text-color);
   background: var(--filter-button-color);
+  transition: color 240ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 240ms cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 240ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filtr-btn:hover,
 .filtr-btn:focus,
@@ -522,6 +517,7 @@ height: 20px;
   margin-top: 30px;  
 }
 .portofolio-link{
+  transition: box-shadow 240ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .portofolio-link:hover,
 .portofolio-link:focus{
