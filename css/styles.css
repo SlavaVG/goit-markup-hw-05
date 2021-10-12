@@ -156,7 +156,7 @@ body {
   border-radius: 2px;
   background-color: var(--accent-color);
   display: block;
-  bottom: 0px;
+  bottom: -1px;
 }
 .header-item:not(:last-child){
   margin-right: 50px;
@@ -289,6 +289,26 @@ body {
   text-align: center;
   color: var(--secondary-title-color);
   margin-bottom: 50px;
+}
+.wedoing-item{
+  position: relative;
+}
+.wedoing-text{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
 }
 /*======== НАША КОМАНДА ==========*/
 .ourteam{
@@ -591,8 +611,12 @@ overflow:hidden;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
 }
+.backdrop.is-hidden
+.modal{
+  opacity: 0;
+  transform: scale(0);
+  }
 .modal{
   width: 528px;
   min-height: 581px;
@@ -603,6 +627,9 @@ overflow:hidden;
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn{
   position: absolute;
@@ -615,4 +642,17 @@ overflow:hidden;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  fill: var(--secondary-title-color);
+  border-radius: 50%;
+  background: #00000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.modal-icon-cancel{
+  width: 18px;
+  height: 18px;
+    margin: 0;
+  padding: 0;
 }
