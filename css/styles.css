@@ -647,12 +647,9 @@ overflow:hidden;
   background: #00000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  padding: 0; /* змінює розміри "Х" на 18х18 з 16х18*/
 }
 .modal-icon-cancel{
   width: 18px;
   height: 18px;
-    margin: 0;
-  padding: 0;
 }
